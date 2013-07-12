@@ -1,0 +1,36 @@
+﻿    <!DOCTYPE html>
+    <html data-ng-app="myApp">
+        <head lang="en">
+            <meta charset="utf-8">
+            <title>Selenium Test</title>  
+
+            <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        </head>
+
+        <body>
+            <div data-ng-controller="MyCtrl">
+                <span id="added" data-ng-show="added">Added</span>
+                <span id="edited" data-ng-show="edited">Edited</span>
+            
+			    <!--<div id="page-content" style="overflow:hidden">-->
+			    <div id="page-content">
+                    <div class="employees view">
+                        <button name="addNewEmployee" id="addNewEmployee" class="btn btn-primary" data-ng-click="add()">Add</button>
+                        <button name="editEmployee" id="editEmployee" class="btn btn-primary" data-ng-click="edit()">Edit</button>
+
+                        <div data-ng-controller="editCtrl" data-ng-include="'app/views/edit.html'"></div>
+                        <div data-ng-controller="addCtrl" data-ng-include="'app/views/add.html'"></div>
+                    </div>
+		        </div>
+
+            </div>  
+        
+            <!-- JS scripts -->
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>  
+            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script> 
+            <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.2/angular-strap.min.js"></script>
+            <script src="app/app.js"></script>
+
+        </body>
+    </html>
