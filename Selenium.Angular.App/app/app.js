@@ -1,22 +1,5 @@
 ﻿var app = angular.module('myApp', []);
 app.controller('MyCtrl', function ($scope) {
-    function init() {
-        $scope.employees = [{
-            Id: 1,
-            Name: "Admin Admin"
-        },
-        {
-            Id: 2,
-            Name: "Guest Guest"
-        },
-        {
-            Id: 3,
-            Name: "Joe Brown"
-        }]
-    }
-
-    init();
-
     $scope.add = function () {
         $scope.$broadcast('openAddEmployee');
     };
